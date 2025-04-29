@@ -57,6 +57,7 @@ A deme financial system built with C# and PostgreSQL
   3. Run the `FinonexDataProcessor` project:
 
      - Follow the console prompts to enter the filename and processing options (1- user events bulk 2- single events):
+       
        First prompt:
        ```
        Enter the file name (or empty for default 'server_events.jsonl'):
