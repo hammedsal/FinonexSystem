@@ -1,0 +1,20 @@
+@FinonexServer_HostAddress = http://localhost:8000
+
+### check server is running
+GET {{FinonexServer_HostAddress}}/events/
+Accept: application/json
+
+### get user events
+GET {{FinonexServer_HostAddress}}/events/userEvents/user3
+Accept: application/json
+
+### post sample event
+POST {{FinonexServer_HostAddress}}/events/liveEvent
+Content-Type: application/json
+Authorization: secret
+
+{
+    "UserId": "user3",
+    "Name": "add_revenue",
+    "Value": 100
+}

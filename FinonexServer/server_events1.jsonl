@@ -1,0 +1,11 @@
+{"UserId":"user1","Name":"add_revenue","Value":-10}
+{"UserId":"user2","Name":"add_revenue","Value":-10}
+{"UserId":"user2","Name":"add_revenue","Value":-10}
+{"UserId":"user1","Name":"add_revenue","Value":-10}
+{"UserId":"user2","Name":"subtract_revenue","Value":-10}
+{"UserId":"user1","Name":"add_revenue","Value":-10}
+{"UserId":"user1","Name":"subtract_revenue","Value":-10}
+{"UserId":"user1","Name":"subtract_revenue","Value":-10}
+{"UserId":"user2","Name":"add_revenue","Value":-10}
+{"UserId":"user1","Name":"add_revenue","Value":1000}
+{"UserId":"user2","Name":"subtract_revenue","Value":1000}
