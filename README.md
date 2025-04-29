@@ -27,6 +27,7 @@ A deme financial system built with C# and PostgreSQL
 - Start the `FinonexServer` project to launch the backend api.
 
 - Run the `FinonexClient`:
+  
   1. Create a text file named `client_events.jsonl` with user events, in aformat where each line is a valid JSON separated with new line:
    ```
    { "userId": "user1", "name": "add_revenue", "value": 60 } 
@@ -44,15 +45,30 @@ A deme financial system built with C# and PostgreSQL
      - You got a prompt of the failed events and the total events uploaded to server.
      - The file renamed to have "Done" extention: client_events.jsonl.Done
 
+
 - Run the `FinonexDataProcessor`:
-  create "server_events.jsonl" with user events, and save it to \FinonexDataProcessor\bin\Debug\net8.0 folder.
-  run FinonexDataProcessor project, answer the prompt for filename, and processing option.
+  
   1. Create a file named `server_events.jsonl` with user events.
   2. Save it under FinonexDataProcessor project folder to:  
      ```
      FinonexDataProcessor\bin\Debug\net8.0\
      ```
   
-  3. Run the `FinonexDataProcessor` project.  
-     - Follow the console prompts to enter the filename and processing options (1- user events bulk 2- single events).  
+  3. Run the `FinonexDataProcessor` project:
+
+     - Follow the console prompts to enter the filename and processing options (1- user events bulk 2- single events):
+       First prompt:
+       ```
+       Enter the file name (or empty for default 'server_events.jsonl'):
+       ```
+       Second prompt:
+       ```
+       Processing option ('1' per user events, '2' per single events):
+       ```
+              
+       
      - The processor will insert the events into the PostgreSQL database.
+     - When FinonexDataProcessor finishes:
+       You got a prompt of "Done".
+
+
